@@ -15,15 +15,13 @@ const app =async (yargsObj) =>{
         // list all movies in datebase
          }else if(yargsObj.update){
             const moive = new Movie(yargsObj.title,yargsObj.actor);
-            console.log(await moive.updateOne.set(collection));
+            console.log(await moive.update(collection));
          
         }else if(yargsObj.delete){
-            const moive = new Movie(yargsObj.title,yargsObj.actor,yargsObj.id);
+            const moive = new Movie(yargsObj.title,yargsObj);
             console.log(await moive.delete(collection));
-
-
-         
-         }else{
+        
+        }else{
         console.log("Incorrect command");
          }
       await client.close();  
