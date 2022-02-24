@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongodb": "^4.4.0",
+    "yargs": "^17.3.1"
+  }
+}
